@@ -1,0 +1,192 @@
+ <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Mart</title>
+    
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+    
+     ul li{
+     background-color:black;
+    float:left;
+    width:175px;
+    }
+   
+    a{
+    padding:20px;
+    
+    }
+    .dropdown-item:hover{
+    background-color:orange;
+    }
+    
+    img{
+      width : 1000px;
+      height : 500px;
+    }
+    .cardsimage{
+    height:100px;
+    }
+    
+    .grid{
+    grid-gap:50px;
+    margin-top:40px;
+    }
+   
+    .container{
+    height:550px;
+    }
+   
+    
+    .form-control:hover{
+    background-color:orange;
+    }
+    
+    </style>
+    </head>
+    <body>
+    
+    
+   <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Mart</title>
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+    <style>
+    
+   ul{
+   color:black;
+   }
+   
+    a{
+    padding:20px;
+    
+    }
+    .dropdown-item:hover{
+    background-color:orange;
+    }
+    
+    img{
+      width : 1000px;
+      height : 640px;
+    }
+    
+    </style>
+    </head>
+    <body>
+    
+    
+    <ul class="nav nav-fill nav-tabs" th:each="navbar : ${navbar}">
+            <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/navbar/cards" th:text="${navbar.heading1}"></a>
+        </li>
+            
+             <li class="nav-item">
+          <a class="nav-link active" href="/navbar/popup" aria-current="page" th:text="${navbar.heading2}"></a>
+        </li>
+             
+            </div>
+            </li>
+            
+            
+             <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"  role="button" data-bs-toggle="dropdown" aria-expanded="false" th:text="${navbar.heading3}"></a>
+          <ul class="dropdown-menu" >
+            <li><a class="dropdown-item"  th:each="dropdown : ${dropdown}" th:text="${dropdown.services}"></a></li>
+            
+          </ul>
+        </li>
+               
+            </div>
+            </li>
+            
+            
+             <li class="nav-item">
+          <a class="nav-link active" aria-current="page" th:text="${navbar.heading4}"></a>
+        </li>
+            
+           <li class="nav-item">
+          <a class="nav-link active" aria-current="page" th:text="${navbar.heading5}"></a>
+        </li>
+        
+            <li class="nav-item">
+          <a class="nav-link active" aria-current="page" th:text="${navbar.heading6}"></a>
+        </li>
+            
+             <li class="nav-item">
+          <a class="nav-link active" aria-current="page" th:text="${navbar.heading7}"></a>
+        </li>
+        </ul>
+      
+
+        
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ 
+   </body>
+    </html>
+        
+        <div class="carouselimage">
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div  class="carousel-item active"  th:each="product : ${products}">
+      <img class="d-block w-100 image"  th:src="@{'/images/' + ${product.imageFileName}}"  alt="...">
+    </div>
+   
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    </div>   
+
+
+ <div class="container">
+  <div class="row row-cols-4 grid">
+	 
+	 <div class="card" style="width: 14rem"; th:each="product : ${products}">
+    <div  class="card" > 
+ <img class="d-block w-100 cardsimage"  th:src="@{'/images/' + ${product.imageFileName}}"  alt="...">
+  
+  <div class="card-body">
+  
+  
+   <div  class="form-control "  th:text="${product.name}"></div>
+   <div class="form-control" th:text="${product.brand}"></div>
+   <div class="form-control" th:text="${product.price}"></div>
+   </div>
+   
+   
+   <div class="card-footer">
+   <div class="card-link">
+   		<button class="btn btn-dark"><a href="www.products.com">products</a></button>
+   		<button type="button" class="btn btn-info btn-sm">Shop</button>
+   	</div>
+   
+   </div>
+   
+</div>
+</div>
+
+  </div>
+</div>
+        
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ 
+   </body>
+    </html>
